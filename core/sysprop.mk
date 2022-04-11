@@ -279,6 +279,8 @@ $(gen_from_buildinfo_sh): $(INTERNAL_BUILD_ID_MAKEFILE) $(API_FINGERPRINT) | $(B
 	        DATE="$(DATE_FROM_FILE)" \
 	        ARCANA_VERSION="$(ARCANA_VERSION)" \
 	        ARCANA_BUILD_TYPE="$(ARCANA_BUILD_TYPE)" \
+	        ARCANA_CODE="$(ARCANA_CODE)" \
+	        PACKAGE_BUILD_TYPE="$(PACKAGE_BUILD_TYPE)" \
 	        $(PRODUCT_BUILD_PROP_OVERRIDES) \
 	        bash $(BUILDINFO_SH) > $@
 
