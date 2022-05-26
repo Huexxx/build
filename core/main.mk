@@ -368,9 +368,15 @@ endif
 ## user/userdebug ##
 
 user_variant := user
+
 ifeq ($(TARGET_BUILD_VARIANT),eng)
 user_variant :=
 endif
+
+ifeq ($(TARGET_BUILD_VARIANT),userdebug)
+user_variant := userdebug
+endif
+
 enable_target_debugging := true
 tags_to_install :=
 ifneq (,$(user_variant))
@@ -409,6 +415,8 @@ else # !enable_target_debugging
   # Target is less debuggable and adbd is off by default
   ADDITIONAL_SYSTEM_PROPERTIES += ro.debuggable=0
 endif # !enable_target_debugging
+
+
 
 ## eng ##
 
