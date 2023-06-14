@@ -29,7 +29,7 @@ PRODUCT_PACKAGES += \
     shell_and_utilities_recovery \
     watchdogd.recovery \
 
-PRODUCT_VENDOR_PROPERTIES += \
+PRODUCT_SYSTEM_PROPERTIES += \
     ro.recovery.usb.vid?=18D1 \
     ro.recovery.usb.adb.pid?=D001 \
     ro.recovery.usb.fastboot.pid?=4EE0 \
